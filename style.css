@@ -1,0 +1,179 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;400;600&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  display: flex;
+  width: 750px;
+  height: 500px;
+}
+
+.tracker {
+  background-color: rgb(0, 0, 97);
+  color: white;
+  padding: 20px;
+  flex: 1;
+}
+.tracker h1 {
+  font-size: 28px;
+  color: rgb(255, 208, 0);
+}
+
+.tracker p {
+  margin-top: 20px;
+}
+.tracker h2 {
+  margin-top: 5px;
+}
+
+.display {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.income,
+.expense {
+  display: inline-block;
+  width: 45%;
+  height: 90px;
+  border-radius: 3px;
+  text-align: center;
+}
+.income {
+  border: 3px solid rgb(2, 174, 2);
+  color: rgb(2, 174, 2);
+}
+
+.expense {
+  border: 3px solid red;
+  color: red;
+}
+
+.income p,
+.expense p {
+  margin-top: 10px;
+  font-size: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 30px;
+}
+label {
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+input {
+  width: 100%;
+  height: 38px;
+  font-size: 18px;
+  margin-top: 10px;
+  border-radius: 2px;
+  border: none;
+  outline: none;
+  padding-left: 10px;
+}
+
+.tracker button {
+  width: 100%;
+  height: 35px;
+  margin-top: 20px;
+  border-radius: 5px;
+  font-size: 15px;
+  background-color: blue;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+.transaction {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: scroll;
+}
+
+.transaction h1 {
+  font-size: 20px;
+  text-transform: uppercase;
+  padding-bottom: 10px;
+  border-bottom: 1px solid rgb(211, 210, 210);
+  margin-bottom: 5px;
+}
+
+.trans {
+  list-style-type: none;
+  margin-bottom: 40px;
+}
+
+.trans li {
+  background-color: #fff;
+  color: #333;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  padding: 10px;
+  margin: 10px 0;
+  position: relative;
+
+  display: flex;
+  justify-content: space-between;
+}
+
+.trans .inc {
+  border-left: 5px solid rgb(2, 208, 2);
+}
+.trans .exp {
+  border-left: 5px solid red;
+}
+
+li span {
+  margin-right: 20px;
+}
+
+.btn-del {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  font-weight: 700;
+  color: white;
+  background-color: red;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  line-height: 10px;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+li:hover .btn-del {
+  opacity: 1;
+}
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background-color: white;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(59, 30, 245);
+  border-radius: 8px;
+}
